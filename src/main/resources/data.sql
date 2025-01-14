@@ -1,0 +1,4 @@
+-- INSERT INTO PRODUCT VALUES
+--                          (1, 'SKU1234', 'Macbook', 'A computer', '2200'),
+--                          (2, 'SKU4455', 'Dell', 'A computer', '1500'),
+--                          (3, 'SKU6677', 'Lenovo', 'A computer', '1400');

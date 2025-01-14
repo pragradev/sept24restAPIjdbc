@@ -1,0 +1,5 @@
+-- CREATE TABLE PRODUCT ( PRODUCT_ID INT PRIMARY KEY ,
+--                        SKU VARCHAR(255),
+--                        NAME VARCHAR(255),
+--                        DESC VARCHAR(255),
+--                        PRICE VARCHAR(10) );
