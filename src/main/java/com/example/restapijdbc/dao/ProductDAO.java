@@ -1,6 +1,7 @@
 package com.example.restapijdbc.dao;
 
 import com.example.restapijdbc.model.Product;
+import com.example.restapijdbc.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -32,5 +33,12 @@ public class ProductDAO {
         };
 
         return jdbcTemplate.query("SELECT * FROM PRODUCT", rm);
+    }
+
+    public boolean saveProduct(Product product){
+        int numOfRows = jdbcTemplate.update("INSERT INTO PRODUCT VALUES (?,?,?,?,?)"
+                ,product.getProductId(),product.getSku(),product.getName()
+                ,product.getDesc(), product.getPrice());
+        return numOfRows > 0;
     }
 }

@@ -31,4 +31,20 @@ public class ProductAPI {
         List<Product> allProducts = productService.getAllProduct();
         return allProducts;
     }
+
+    @GetMapping("/save")
+    public String saveProduct(){
+        Product product = new Product();
+        product.setProductId(4);
+        product.setSku("SKU4455");
+        product.setName("Acer");
+        product.setPrice("1100");
+        product.setDesc("A Game Computer");
+        boolean result = productService.saveProduct(product);
+        if (result){
+            return "Product has been added successfully";
+        }else {
+            return "Product Insertion failure: Please try again!!";
+        }
+    }
 }

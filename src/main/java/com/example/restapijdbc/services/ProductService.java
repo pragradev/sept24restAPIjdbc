@@ -17,4 +17,8 @@ public class ProductService {
         return productDAO.getAllProducts();
     }
 
+    public boolean saveProduct(Product product){
+        return productDAO.saveProduct(product);
+    }
+
 }
